@@ -32,7 +32,7 @@ void printFCFS(vector<Process*> &process, int n){
         Process* p = pq.top();
         pq.pop();
         cTime+=p->burstTime;
-        cout<<"Process Name: "<<p->pno<<" - "<<"Arrival Time: "<<p->arrivalTime<<" - "<<"Burst Time: "<<p->burstTime<<" - "<<"Completion Time: "<<cTime<<" - "<<"TurnAroundTime: "<<cTime - p->arrivalTime<<
+        cout<<"Process Name: "<<p->pno<<" - "<<"Arrival Time: "<<p->arrivalTime<<" - "<<"Burst Time: "<<p->burstTime<<" - "<<"Completion Time: "<<cTime<<" - "<<"TurnAroundTime: "<<cTime - p->arrivalTime<<" - "<<
         "Wait Time: "<<cTime - p->arrivalTime - p->burstTime<<endl;
         wTime+=cTime - p->arrivalTime - p->burstTime;
     }
@@ -58,6 +58,5 @@ int main(){
         Process* p = new Process(pno,at,bt);
         process.push_back(p);
     }
-    int n = process.size();
     printFCFS(process,n);
 }
