@@ -27,7 +27,7 @@ void printFCFS(vector<Process*> &process, int n){
         pq.push(it);
     }
     int cTime=0;
-    int wTime=0;
+    float wTime=0;
     while(!pq.empty()){
         Process* p = pq.top();
         pq.pop();
@@ -36,8 +36,8 @@ void printFCFS(vector<Process*> &process, int n){
         "Wait Time: "<<cTime - p->arrivalTime - p->burstTime<<endl;
         wTime+=cTime - p->arrivalTime - p->burstTime;
     }
-    wTime/=n;
-    cout<<"Average Wait Time: "<<wTime<<endl;
+    
+    cout<<"Average Wait Time: "<<wTime/(float)n<<endl;
 }
 int main(){
     int n;
@@ -47,8 +47,8 @@ int main(){
     vector<Process*> process;
     for(int i = 0;i<n;i++){
         int pno;
-        int at;
-        int bt;
+        float at;
+        float bt;
         cout<<"Enter process number: "<<endl;
         cin>>pno;
         cout<<"Enter arrival time: "<<endl;
