@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Projects/Scheduling-Algorithms/SJF",
-      "program": "d:/Projects/Scheduling-Algorithms/SJF/build/Debug/outDebug",
+      "cwd": "d:/Projects/Scheduling-Algorithms/PSA",
+      "program": "d:/Projects/Scheduling-Algorithms/PSA/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
